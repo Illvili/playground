@@ -3,20 +3,32 @@
 
 ## structure
 ```
-playground // root directory
-	| build // all files goes here and the local server here too
-		| lib // lib files copy to here and keep structure as is
-		| script // typescript complied to here
-		| css // sass complied to here
-	| lib // downloaded libs like jQuert, Bootstap, Vue and so on
-	| src // you source files here
-		| jade // jade and regular html files
-		| sass // sass and regular css files
-		| ts // typescript and regular javascript files
+playground
+	| build
+		| css
+		| lib
+		| script
+	| lib
+	| src
+		| jade
+		| sass
+		| ts
+```
+| Source | Type | Target |
+| ------ | ---- | ------ |
+| `lib` | Library | `build/lib` |
+| `src/jade` | Jade, HTML | `build` |
+| `src/sass` | SASS, CSS | `build/css` |
+| `src/ts` | TypeScript, JavsScript | `build/script` |
+
+## install
+```
+git clone https://github.com/Illvili/playground.git
+cd playground
+npm install
 ```
 
 ## run
 ```
-npm install
 gulp
 ```
